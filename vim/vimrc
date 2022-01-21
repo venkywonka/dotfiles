@@ -1,0 +1,38 @@
+inoremap jk <ESC>
+noremap! <c-BS> <c-w>
+noremap! <c-h> <c-w>
+"nnoremap j jzz
+"nnoremap k kzz
+noremap J 10<C-e>
+noremap K 10<C-y>
+
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-e> :NERDTreeToggle<CR> 
+" nnoremap <C-e> :NERDTreeFind<CR>
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
+set modifiable 
+set relativenumber
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+set ignorecase
+set backspace=indent,eol,start
+
+call plug#begin()
+" fuzzy finder
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+" Conquer of completion for intellisense
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Fugitive for git
+Plug 'https://tpope.io/vim/fugitive.git'
+call plug#end()
+
