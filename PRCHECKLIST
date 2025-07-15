@@ -1,1 +1,2 @@
---target pr-buddy-testing
+--target pr-buddy-testing +title+ Checklist
+--target pr-buddy-testing +task+ check this box if you want to merge!
